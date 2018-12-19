@@ -1,13 +1,21 @@
 #!/usr/bin/env python
 import random
+import argparse
 
-draw_count = 5 #number of draws before lotto drawing date
+# get user input from command line to determine number of draws to generate
+parser = argparse.ArgumentParser(description='Specify the number of user draws.')
+parser.add_argument('-d','--draw_count', type=int, help='an integer for number of draws')
+args = parser.parse_args()
+draw_count = args.draw_count
+
+
 draw_holder = [] #holds all the draws or user ticket values
+
 
 # generate a lotto ball holder and populate it with all the numbers for drawing
 ## use a list with a range of numbers from 1 to 49
 ball_cage = list(range(1,50))
-print(ball_cage) # test that ball cage contains correct range
+# print(ball_cage) # test that ball cage contains correct range
  
 # generate a lotto draw - list (6) random numbers - for win numbers and draws
 def draw():
