@@ -9,9 +9,9 @@ draw_holder = [] #holds all the draws or user ticket values
 ball_cage = list(range(1,50))
 print(ball_cage) # test that ball cage contains correct range
  
-# generate a lotto draw - list 4 (6) random numbers - for win numbers and draws
+# generate a lotto draw - list (6) random numbers - for win numbers and draws
 def draw():
-    draw = sorted(random.sample(range(1,50),4))
+    draw = sorted(random.sample(range(1,50),6))
     return draw
 
 lotto_draw = draw() # draw the set of numbers that users must match
@@ -22,10 +22,12 @@ while counter < draw_count:
     draw_holder.append(draw())
     counter = counter + 1
 
-print(draw_holder)
-
-
 
 # compare draws to the lotto draw numbers
+for draw in draw_holder:
+    if draw == lotto_draw:
+        print("Win " + str(draw) + " - " + str(lotto_draw))
+    else:
+        print("Lose" + str(draw) + " - " + str(lotto_draw))
 # print count, draw number and win number
 # print all draw numbers
