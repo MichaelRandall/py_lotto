@@ -1,0 +1,19 @@
+"""
+Version 1 plan:
+This app generates a mock set of lottery numbers
+and allows the user to enter a number of attempts
+after which point, all of the attempts are compared
+to the mock set of lottery numbers and a winner
+is determined if there is one and not otherwise
+
+Version 2 plan:
+Reverse order and see how many times it takes to match the winning set of number
+"""
+
+"""
+# generate a lotto ball holder and populate it with all the numbers for drawing
+## use a list with a range of numbers from 1 to 64
+# generate a lotto draw - list 4 random numbers - for wind numbers and draws
+# compare draws to the lotto draw numbers
+# print count, draw number and win number
+# print all draw numbers
