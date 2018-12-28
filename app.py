@@ -8,7 +8,7 @@ import locale # used to work with numbers and local formatting
 parser = argparse.ArgumentParser(description='Specify the number of user draws.')
 parser.add_argument('-d','--draw_count', type=int, help='an integer for number of draws')
 parser.add_argument('-r','--reverse_game', action="store_true", help="run a game until a winner is drawn")
-parser.add_argument('s','--show_stats', action="store_true", help="display statistics after game")
+parser.add_argument('-s','--show_stats', action="store_true", help="display statistics after game")
 args = parser.parse_args()
 draw_count = args.draw_count
 reverse = args.reverse_game
